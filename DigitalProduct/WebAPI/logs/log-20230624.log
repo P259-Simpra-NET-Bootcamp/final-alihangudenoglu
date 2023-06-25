@@ -1,0 +1,242 @@
+2023-06-24 23:06:25.362 [INF] Application is starting...
+2023-06-24 23:06:36.900 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-24 23:06:36.904 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-24 23:07:40.368 [INF] Application is starting...
+2023-06-24 23:08:18.966 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-24 23:08:18.971 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-24 23:10:49.449 [INF] Application is starting...
+2023-06-24 23:11:38.302 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-24 23:11:38.306 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-24 23:17:14.239 [INF] Application is starting...
+2023-06-24 23:17:54.915 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-24 23:17:54.920 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-24 23:27:00.049 [INF] Application is starting...
+2023-06-24 23:27:41.522 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-24 23:29:20.799 [ERR] 20:29:20 : System.Exception: yetkiniz yok
+   at Business.BusinessAspects.Autofac.SecuredOperation.OnBefore(IInvocation invocation) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\Business\BusinessAspects\Autofac\SecuredOperation.cs:line 37
+   at Core.Utilities.Interceptors.MethodInterception.Intercept(IInvocation invocation) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\Core\Utilities\Interceptors\MethodInterception.cs:line 15
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IUserServiceProxy.GetAll()
+   at WebAPI.Controllers.UserController.GetAll() in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Controllers\User\UserController.cs:line 22
+   at lambda_method380(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 37
+   at WebAPI.Middleware.ErrorHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\ErrorHandlerMiddleware.cs:line 20
+2023-06-24 23:29:22.897 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 1ad35f3d-ed92-492a-9474-a75b72c69d0e and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at WebAPI.Middleware.ErrorHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\ErrorHandlerMiddleware.cs:line 24
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-24 23:29:22.959 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 1ad35f3d-ed92-492a-9474-a75b72c69d0e and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-24 23:29:22.976 [ERR] Connection id "0HMRKU5K4SG7R", Request id "0HMRKU5K4SG7R:00000001": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 1ad35f3d-ed92-492a-9474-a75b72c69d0e and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at WebAPI.Middleware.ErrorHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\ErrorHandlerMiddleware.cs:line 24
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-06-24 23:29:55.568 [INF] Application is starting...
+2023-06-24 23:30:08.992 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-24 23:39:19.866 [INF] Application is starting...
+2023-06-24 23:39:31.459 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-24 23:39:39.746 [ERR] 20:39:39 : System.SystemException: yetkiniz yok
+   at Business.BusinessAspects.Autofac.SecuredOperation.OnBefore(IInvocation invocation) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\Business\BusinessAspects\Autofac\SecuredOperation.cs:line 37
+   at Core.Utilities.Interceptors.MethodInterception.Intercept(IInvocation invocation) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\Core\Utilities\Interceptors\MethodInterception.cs:line 15
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IUserServiceProxy.GetAll()
+   at WebAPI.Controllers.UserController.GetAll() in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Controllers\User\UserController.cs:line 22
+   at lambda_method380(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 37
+   at WebAPI.Middleware.ErrorHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\ErrorHandlerMiddleware.cs:line 20
+2023-06-24 23:39:39.791 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id a0e2827d-edce-4217-b2c2-ffef6390ab8d and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at WebAPI.Middleware.ErrorHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\ErrorHandlerMiddleware.cs:line 24
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-24 23:39:39.835 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id a0e2827d-edce-4217-b2c2-ffef6390ab8d and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-24 23:39:39.850 [ERR] Connection id "0HMRKUCBR55IT", Request id "0HMRKUCBR55IT:00000009": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id a0e2827d-edce-4217-b2c2-ffef6390ab8d and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at WebAPI.Middleware.ErrorHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\ErrorHandlerMiddleware.cs:line 24
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-06-24 23:40:50.989 [INF] Application is starting...
+2023-06-24 23:41:08.720 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-24 23:41:10.413 [WRN] The 'bool' property 'Guarantee' on entity type 'Product' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-24 23:41:10.420 [WRN] The 'bool' property 'Status' on entity type 'Product' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-24 23:41:11.913 [INF] -------------Request-Begin------------
+2023-06-24 23:41:11.914 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7033 
+Path: /api/User/GetAll 
+QueryString:  
+Request Body: 
+2023-06-24 23:41:11.915 [INF] 
+
+2023-06-24 23:41:11.917 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7033 
+Path: /api/User/GetAll 
+QueryString:  
+StatusCode: 200 
+Response Body: {"data":[{"firstName":"alihan","lastName":"güdenoğlu","userName":"ejderiderya","email":"alihan_135@hotmail.com"},{"firstName":"züheyla","lastName":"güdenoğlu","userName":"cipcik","email":"cipcik@hotmail.com"},{"firstName":"tuğkan","lastName":"gönültaş","userName":"elraen","email":"elraen@hotmail.com"}],"success":true,"message":null}
+2023-06-24 23:41:11.925 [INF] -------------Request-End------------
+2023-06-24 23:44:35.936 [INF] Application is starting...
+2023-06-24 23:45:04.257 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-24 23:45:50.063 [WRN] The 'bool' property 'Guarantee' on entity type 'Product' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-24 23:45:50.070 [WRN] The 'bool' property 'Status' on entity type 'Product' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-24 23:46:45.685 [INF] -------------Request-Begin------------
+2023-06-24 23:46:46.672 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7033 
+Path: /api/User/GetAll 
+QueryString:  
+Request Body: 
+2023-06-24 23:46:49.796 [INF] 
+
+2023-06-24 23:46:51.139 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7033 
+Path: /api/User/GetAll 
+QueryString:  
+StatusCode: 200 
+Response Body: {"data":[{"firstName":"alihan","lastName":"güdenoğlu","userName":"ejderiderya","email":"alihan_135@hotmail.com"},{"firstName":"züheyla","lastName":"güdenoğlu","userName":"cipcik","email":"cipcik@hotmail.com"},{"firstName":"tuğkan","lastName":"gönültaş","userName":"elraen","email":"elraen@hotmail.com"}],"success":true,"message":null}
+2023-06-24 23:46:57.234 [INF] -------------Request-End------------
+2023-06-24 23:51:25.233 [INF] Application is starting...
+2023-06-24 23:51:43.075 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-24 23:52:22.955 [ERR] 20:52:22 : System.NotImplementedException: The method or operation is not implemented.
+   at Business.BusinessAspects.Autofac.SecuredOperation.OnBefore(IInvocation invocation) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\Business\BusinessAspects\Autofac\SecuredOperation.cs:line 39
+   at Core.Utilities.Interceptors.MethodInterception.Intercept(IInvocation invocation) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\Core\Utilities\Interceptors\MethodInterception.cs:line 15
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IUserServiceProxy.GetAll()
+   at WebAPI.Controllers.UserController.GetAll() in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Controllers\User\UserController.cs:line 22
+   at lambda_method380(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 37
+   at WebAPI.Middleware.ErrorHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\ErrorHandlerMiddleware.cs:line 20
+2023-06-24 23:52:22.990 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 35e4ac4f-c583-4457-8c4e-8bfd159e9b4c and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at WebAPI.Middleware.ErrorHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\ErrorHandlerMiddleware.cs:line 24
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-24 23:52:23.040 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 35e4ac4f-c583-4457-8c4e-8bfd159e9b4c and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-24 23:52:23.052 [ERR] Connection id "0HMRKUJ55D4CC", Request id "0HMRKUJ55D4CC:00000009": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 35e4ac4f-c583-4457-8c4e-8bfd159e9b4c and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at WebAPI.Middleware.ErrorHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\Alihan\Desktop\DigitalProduct\DigitalProduct\WebAPI\Middleware\ErrorHandlerMiddleware.cs:line 24
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
